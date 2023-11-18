@@ -1,0 +1,23 @@
+Đoạn code trên là một đoạn mã JavaScript, được thiết kế để tạo một ứng dụng đo tốc độ gõ (typing speed test) trên trình duyệt web. Dưới đây là giải thích từng phần của mã:
+
+1. **`const paragraphs`**: Một mảng chứa các đoạn văn bản. Mỗi đoạn văn bản là một chuỗi các từ và câu chuyện ngẫu nhiên.
+
+2. **`const typingText`, `const inpField`, `const tryAgainBtn`, `const timeTag`, `const mistakeTag`, `const wpmTag`, `const cpmTag`**: Các biến này lưu trữ các phần tử HTML được chọn bằng cách sử dụng `document.querySelector`. Chúng được sử dụng để tương tác với các phần tử trên trang web.
+
+3. **`let timer`, `let maxTime`, `let timeLeft`, `let charIndex`, `let mistakes`, `let isTyping`**: Các biến để theo dõi thời gian, vị trí ký tự, số lỗi, và trạng thái đang nhập liệu.
+
+4. **`function loadParagraph()`**: Hàm này chọn một đoạn văn bản ngẫu nhiên từ mảng `paragraphs` và hiển thị nó trong phần tử HTML có class là "typing-text".
+
+5. **`function initTyping()`**: Hàm này được gọi khi người dùng bắt đầu nhập liệu. Nó kiểm tra xem ký tự đã nhập liệu có đúng không, tính toán số từ gõ mỗi phút (WPM), số ký tự đúng, số lỗi, và cập nhật giao diện người dùng.
+
+6. **`function initTimer()`**: Hàm này đếm ngược thời gian và cập nhật thời gian còn lại và WPM mỗi giây.
+
+7. **`function resetGame()`**: Hàm này được gọi khi người dùng muốn chơi lại. Nó đặt lại tất cả các giá trị về trạng thái ban đầu và tải một đoạn văn bản mới.
+
+8. **`loadParagraph()`**: Gọi hàm này để khởi tạo trò chơi bằng cách hiển thị một đoạn văn bản ngẫu nhiên.
+
+9. **`inpField.addEventListener("input", initTyping)`**: Gắn một sự kiện nghe vào ô nhập liệu để gọi hàm `initTyping` mỗi khi người dùng nhập ký tự.
+
+10. **`tryAgainBtn.addEventListener("click", resetGame)`**: Gắn một sự kiện nghe vào nút "Try Again" để gọi hàm `resetGame` mỗi khi người dùng nhấn nút.
+
+Mục tiêu của ứng dụng là đo tốc độ gõ của người chơi trong khoảng thời gian nhất định và hiển thị số lỗi, số từ gõ mỗi phút (WPM), và số ký tự đúng (CPM).
