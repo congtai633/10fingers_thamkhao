@@ -16,11 +16,11 @@ body{
     background: #3A4D39;
 }
 .name{
-    
+    position: absolute;
     height: 700px;
-    width: 5px;
-    
-    
+    length:50px;
+    font-size: 40px;
+    color: white;
 }
 #paragraph{
     color: #646669;
