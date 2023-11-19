@@ -17,8 +17,7 @@ body{
 }
 .name{
     position: absolute;
-    height: 700px;
-    length:50px;
+    height: 600px;
     font-size: 40px;
     color: white;
 }
@@ -73,7 +72,7 @@ body{
 }
 
 .typing-text p span.correct{
-    color: green;
+    color: rgb(0, 255, 0);
 }
 
 .typing-text p span.incorrect{
